@@ -1,0 +1,12 @@
+@startuml
+participant ブラウザ
+participant Webサーバ
+participant プログラム
+database DB
+ブラウザ -> Webサーバ:リクエスト
+Webサーバ -> プログラム:実行
+プログラム -> DB:SQL
+DB -> プログラム:結果
+プログラム -> Webサーバ:HTML
+Webサーバ -> ブラウザ:HTML
+@enduml
